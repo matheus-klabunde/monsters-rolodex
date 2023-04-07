@@ -22,6 +22,7 @@ async function search(el){
 
 input.addEventListener('keyup', e => {
   let el = e.target.value;
+  console.log(el);
 
   if(el){
     search(el);
