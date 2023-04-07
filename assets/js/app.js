@@ -6,7 +6,7 @@ async function search(el){
   const request = await fetch(urlApi)
   const data = await request.json()
 
-  const filteredMonsters = data.filter(data => el ? data.name.toLowerCase().includes(el.toLowerCase()) : data);
+  const filteredMonsters = el ? data.filter(data => data.name.toLowerCase().includes(el.toLowerCase())) : data;
 
   const card = term =>{
     return `
