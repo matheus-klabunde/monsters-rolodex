@@ -5,14 +5,9 @@ const section = document.querySelector('.card-list');
 async function search(el){
   const request = await fetch(urlApi)
   const data = await request.json()
-  let filteredMonsters;
 
-  if(!el){
-    filteredMonsters = data.filter(data => data);
-  } else {
-    filteredMonsters = data.filter(data => data.name.toLowerCase().includes(el.toLowerCase()));
-  }
-  
+  const filteredMonsters = data.filter(data => el ? data.name.toLowerCase().includes(el.toLowerCase()) : data);
+
   const card = term =>{
     return `
     <div>
