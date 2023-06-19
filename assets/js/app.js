@@ -10,7 +10,7 @@ async function search(el){
 
   const card = term =>{
     return `
-    <div>
+    <div class="monsterrolodex">
       <img src='https://robohash.org/${term.id}?set=set2&size=180x180' alt='monster ${term.id}'>
       <h2> ${term.name}</h2>
       <p>${term.email}</p>
